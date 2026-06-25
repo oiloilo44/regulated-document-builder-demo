@@ -1,0 +1,171 @@
+{
+    "TestReqNo_rect": [
+        30,
+        10,
+        220,
+        25
+    ],
+    "TestReqNo_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "StockedAssetCode_rect": [
+        30,
+        25,
+        220,
+        40
+    ],
+    "StockedAssetCode_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "PrtReqEmpName_rect": [
+        230,
+        10,
+        440,
+        25
+    ],
+    "PrtReqEmpName_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "ConfirmEmpName_rect": [
+        450,
+        10,
+        580,
+        25
+    ],
+    "ConfirmEmpName_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "TestUseKind_rect": [
+        230,
+        25,
+        440,
+        40
+    ],
+    "TestUseKind_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "ApprovalDate_rect": [
+        450,
+        25,
+        580,
+        40
+    ],
+    "ApprovalDate_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "RePrtCnt_rect": [
+        30,
+        820,
+        300,
+        835
+    ],
+    "RePrtCnt_text": {
+        "font_size": 9,
+        "font_name": "malgun",
+        "font_path": "assets/fonts/malgun.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            255
+        ],
+        "align": "left"
+    },
+    "watermark_image_rect": [
+        231.53,
+        794.0,
+        363.47,
+        840.41
+    ],
+    "watermark_opacity": 0.7,
+    "PrtReqNo_rect": [
+        450.0,
+        811.0,
+        580.0,
+        835.0
+    ],
+    "PrtReqNo_text": {
+        "font_size": 18,
+        "font_name": "barcode",
+        "font_path": "assets/fonts/code39-3.ttf",
+        "font_bold_path": "assets/fonts/malgunbd.ttf",
+        "use_bold_font": false,
+        "font_color": [
+            0,
+            0,
+            0
+        ],
+        "align": "right"
+    },
+    "text_templates": {
+        "TestReqNo": "■ 관리번호 ({TestReqNo})",
+        "StockedAssetCode": "■ 제조번호/입고번호 ({StockedAssetCode})",
+        "PrtReqEmpName": "■ 요청자 ({PrtReqEmpName}) / 승인자 ({ConfirmEmpName})",
+        "TestUseKind": "■ 용도 ({TestUseKind})",
+        "ConfirmEmpName": "■ 출력페이지 {page}/{total_pages}",
+        "ApprovalDate": "■ 승인일자 {ApprovalDate}",
+        "RePrtCnt": "■ 출력횟수 ({RePrtCnt}회){reason}",
+        "PrtReqNo": "*{PrtReqNo}{PrtReqSeq}*"
+    }
+}
