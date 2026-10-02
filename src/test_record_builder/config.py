@@ -20,7 +20,7 @@ _BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 def _get_asset_path(rel_path: str) -> str:
     # 현재 디렉토리에 있으면 그것을 우선 사용, 없으면 BASE_DIR 기준 사용
     if os.path.exists(rel_path):
-        return rel_path
+        return os.path.abspath(rel_path)
     return os.path.join(_BASE_DIR, rel_path)
 
 ASSET_FONT_MALGUN = os.getenv("ASSET_FONT_MALGUN", "malgun.ttf")
@@ -191,7 +191,7 @@ class StorageConfig:
 @dataclass
 class ResourceConfig:
     """보조 리소스 설정"""
-    watermark_image_path: str = os.getenv("WATERMARK_IMAGE_PATH", "assets/images/controlled_copy.jpg")
+    watermark_image_path: str = os.getenv("WATERMARK_IMAGE_PATH", _get_asset_path("assets/images/controlled_copy.jpg"))
 
 @dataclass
 class DBConnectionConfig:

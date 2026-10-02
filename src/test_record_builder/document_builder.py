@@ -40,7 +40,7 @@ class TestRecordBuilder:
             raise RuntimeError("열려있는 PDF 문서가 없습니다.")
         try:
             # 출력 디렉토리 확인 및 생성
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
             # PyMuPDF 특성상 가비지 제거(garbage=4), 스트림 압축(deflate=True) 권장
             self.doc.save(output_path, garbage=4, deflate=True)
             logger.debug(f"PDF 저장 완료: {output_path}")
@@ -256,13 +256,14 @@ class TestRecordBuilder:
         해당 페이지에 폰트를 등록하고, 사용 가능한 폰트명을 반환합니다.
         
         Returns:
-            등록된 폰트명 (실패 시 기본 폰트 "helv")
+            등록된 폰트명 (실패 시 한글을 지원하는 내장 폰트 "korea")
         """
         if not os.path.exists(font_path):
             # 상대 경로 해결 시도
             from test_record_builder.config import _get_asset_path
             basename = os.path.basename(font_path) if os.sep in font_path or "/" in font_path else font_path
-            font_path = _get_asset_path(basename)
+            resolved_path = _get_asset_path(font_path)
+            font_path = resolved_path if os.path.exists(resolved_path) else _get_asset_path(basename)
         
         if os.path.exists(font_path):
             try:
@@ -273,7 +274,7 @@ class TestRecordBuilder:
         else:
             logger.warning(f"폰트 경로를 찾을 수 없습니다: {font_path}, 기본 폰트로 대체됩니다.")
         
-        return "helv"
+        return "korea"
 
     @staticmethod
     def _normalize_color(rgb: Tuple[int, int, int]) -> Tuple[float, float, float]:

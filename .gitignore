@@ -28,3 +28,6 @@ docs/
 
 # Testing
 .pytest_cache/
+
+# Generated synthetic demo input
+samples/input.pdf

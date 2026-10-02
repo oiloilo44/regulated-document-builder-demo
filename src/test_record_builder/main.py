@@ -97,6 +97,19 @@ def _load_layout_config(config: DocumentBuilderConfig) -> None:
             config.positions = loaded_pos
             logger.debug(f"레이아웃 설정 로드 완료: {layout_conf_path}")
 
+    # 명시한 환경 변수는 저장된 레이아웃의 폰트 경로보다 우선합니다.
+    for field_name in config.positions.__dataclass_fields__:
+        if not field_name.endswith("_text"):
+            continue
+        text_config = getattr(config.positions, field_name)
+        if field_name == "PrtReqNo_text":
+            text_config.font_path = os.getenv("ASSET_FONT_BARCODE", text_config.font_path)
+        else:
+            text_config.font_path = os.getenv("ASSET_FONT_MALGUN", text_config.font_path)
+            text_config.font_bold_path = os.getenv(
+                "ASSET_FONT_MALGUN_BOLD", text_config.font_bold_path
+            )
+
 
 def _copy_from_storage(input_pdf_path: str, storage_handler: StorageHandler) -> str:
     """storage에서 PDF 파일을 로컬로 복사"""

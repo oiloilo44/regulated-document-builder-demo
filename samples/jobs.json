@@ -1,0 +1,18 @@
+[
+  {
+    "InputPdfPath": "samples/input.pdf",
+    "TestReqNo": "REQ-001",
+    "PrtReqNo": "BARCODE-001",
+    "PrtReqSeq": "0",
+    "StockedAssetCode": "LOT-001",
+    "PrtReqEmpName": "요청자",
+    "ConfirmEmpName": "승인자",
+    "TestUseKind": "QC",
+    "ApprovalDate": "2026-01-01",
+    "RePrtCnt": "1",
+    "RePrtReason": "",
+    "PageReqALLYn": "Y",
+    "PageReqStartNo": "0",
+    "PageReqEndNo": "0"
+  }
+]

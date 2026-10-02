@@ -101,7 +101,7 @@
         40
     ],
     "ApprovalDate_text": {
-        "font_size": 9,
+        "font_size": 7,
         "font_name": "malgun",
         "font_path": "assets/fonts/malgun.ttf",
         "font_bold_path": "assets/fonts/malgunbd.ttf",
@@ -148,7 +148,7 @@
     "PrtReqNo_text": {
         "font_size": 18,
         "font_name": "barcode",
-        "font_path": "assets/fonts/code39-3.ttf",
+        "font_path": "assets/fonts/CODE39-3.TTF",
         "font_bold_path": "assets/fonts/malgunbd.ttf",
         "use_bold_font": false,
         "font_color": [
